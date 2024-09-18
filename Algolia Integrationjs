@@ -1,0 +1,23 @@
+import React from 'react';
+import algoliasearch from 'algoliasearch/lite';
+import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
+
+const searchClient = algoliasearch('YourAppID', 'YourAPIKey');
+
+const SearchComponent = () => {
+  return (
+    <InstantSearch searchClient={searchClient} indexName="products">
+      <SearchBox />
+      <Hits hitComponent={Hit} />
+    </InstantSearch>
+  );
+};
+
+const Hit = ({ hit }) => (
+  <div>
+    <h4>{hit.name}</h4>
+    <p>Rating: {hit.rating}</p>
+  </div>
+);
+
+export default SearchComponent;
