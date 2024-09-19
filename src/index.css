@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;  
+
+:root {
+  --standard-app-color: #e21604;
+  --dark-standard-app-color: #c91606;
+  --light-standard-app-color: #fff8f7;
+  --standard-app-success-color: @apply bg-green-700;
+  font-family: 'Ubutu','Montserrat', 'Poppins';
+  line-height: 1.5;
+  font-weight: 400;
+  color: hsl(0, 0%, 17%)
+}
+
+.graph-bg {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ef1704' fill-opacity='0.04'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.app-bg-color {
+  background-color: var(--standard-app-color);
+}
+
+.app-border {
+  border: 2px solid var(--standard-app-color)
+}
+
+.hover-app-bg-color:hover {
+  background-color: var(--dark-standard-app-color);
+}
+
+.app-text-color {
+  color: var(--standard-app-color);
+}
+
+.hover-app-text-color:hover{
+  color: var(--standard-app-color);
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+  @apply text-slate-700
+}
+
+
+.required::after {
+  content: ' *';
+  color: var(--standard-app-color);
+}
+
+.app-success {
+  transition: 0.1s ease-in-out;
+  @apply text-slate-900;
+}
+
+
+.app-page-tabs {
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+
+}
+.app-page-tabs.active {
+  color: var(--standard-app-color);
+  @apply font-extrabold;
+}
+
+.app-page-tabs:hover {
+  color: var(--standard-app-color);
+}
+
+.app-header {
+   box-shadow: 0 0 10px  0 #eee;
+}
+
+
+/*
+.app-content {
+  height: 84vh;
+}
+
+.app-footer {
+  height: 8vh;
+} */
+
+p {
+  line-height: 20px;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--standard-app-color);
+}
+
+.catgeories-tabs::-webkit-scrollbar {
+  width:0;
+  height:  0;
+}
+
+.catgeories-tabs::-webkit-scrollbar-thumb {
+    background: none;
+    height: 0;
+    width: 0;
+}
+
+.job-card{
+  display: grid;
+  grid-template-rows: 2fr 5fr 1fr;
+  height: 21rem;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 0.9rem;
+  @apply  px-[3.5vh] py-[3vh] w-full place-items-start gap-3 text-sm ;
+  box-shadow: 3px 3px 8px -1px #ebebeb;
+}
+
+.job-card:hover {
+  border: 1px solid #b1aeae;
+  cursor: pointer;
+  background-color: #e4e4e415;
+  /* box-shadow: 0px 1.6px 3.6px rgba(238, 236, 236, 0.13), 0px 0px 2.9px rgba(202, 202, 202, 0.11); */
+  
+  
+}
+
+.job-card:hover div h2 {
+  text-decoration: underline;
+}
+
+.app-gray {
+  @apply bg-gray-100;
+}
+
+.app-grid {
+  grid-template-rows: 10% 90%;
+}
+
+.line-height-ok {
+  line-height: 1.1;
+}
+
+.job-card-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  @apply bg-gray-100;
+  /* background-color: ; */
+}
+
+@media screen and (max-width: 899px) {
+  .app-grid {
+    grid-template-rows: 10% 80% 10%;
+  }
+
+  .job-card-img {
+    width: 40px;
+  height: 40px;
+  }
+}
